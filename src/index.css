@@ -5,6 +5,16 @@
 *{
     margin: 10px;
     padding: 0;
-    height: 100vh;
+    /* height: 100vh; */
     box-sizing: border-box;
 }
+
+::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  /* .example {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+  } */

@@ -46,23 +46,23 @@ const dummy: dumm[] = [
 
 const Chatbar = () => {
   return (
-    <div className="flex flex-col justify-evenly shadow-x h-eighty rounded-xl w-thirty overflow-scroll">
-        <div>All</div>
+    <div className="flex flex-col justify-evenly shadow-x h-eighty rounded-xl w-thirty overflow-scroll border-solid border-2 border-gray-200">
+        <div className="flex">All</div>
         {
             dummy.map((ele,idx) => (
                 <>
                 <div key={idx} className="flex justify-between items-center h-twenty ">
-                    <img src={ele.photo} alt={ele.name} />
+                    <img className="rounded-full h-16 w-16 " src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt={ele.name} />
                     <div className="flex flex-col items-center justify-around">
                         <span>{ele.name}</span>
                         <span>{ele.desc}</span>
                     </div>
-                    <div className="flex flex-col items-center justify-around">
+                    <div className="flex flex-col items-end justify-end">
                         <span>{ele.time}</span>
                         <span>{ele.chatNum}</span>
                     </div>
                 </div>
-                <hr/>
+                <hr key={idx}/>
                 </>
             ))
         }
